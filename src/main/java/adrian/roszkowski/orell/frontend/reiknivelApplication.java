@@ -18,7 +18,7 @@ import java.io.IOException;
 public class reiknivelApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(reiknivelApplication.class.getResource("reiknivel-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(reiknivelApplication.class.getResource("calculator-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 400);
         stage.setTitle("Calculator");
         stage.setResizable(false);

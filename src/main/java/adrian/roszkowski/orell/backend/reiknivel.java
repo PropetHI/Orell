@@ -15,16 +15,16 @@ public class reiknivel {
     // For more comfortable reading. I understand the minor increase in efficiency / optimization
     // When opting to use an array instead. With it being more efficient the more Lambda operations
     // / functions there are.
-    public final Reikna addition = (int a, int b) -> {
+    public final Calculate addition = (int a, int b) -> {
         return a + b;
     };
-    public final Reikna decrement = (int a, int b) -> {
+    public final Calculate decrement = (int a, int b) -> {
         return a - b;
     };
-    public final Reikna division = (int a, int b) -> {
+    public final Calculate division = (int a, int b) -> {
         return a / b;
     };
-    public final Reikna multiplication = (int a, int b) -> {
+    public final Calculate multiplication = (int a, int b) -> {
         return a * b;
     };
 
@@ -42,7 +42,7 @@ public class reiknivel {
      * @param _function
      * @param priority
      */
-    public void setFunction(Reikna _function, int priority){
+    public void setFunction(Calculate _function, int priority){
         if (functions[functions.length-1] != null)
         {
             FunctionContainer[] newFunctions = functions;
@@ -83,7 +83,7 @@ public class reiknivel {
 
         for (int i = 0; i < sortedFunctions.length; i++) {
             try{
-                int value = sortedFunctions[i].reikna.calculate(values[sortedFunctions[i].originalPosition], values[sortedFunctions[i].originalPosition + 1]);
+                int value = sortedFunctions[i].calculate.calculate(values[sortedFunctions[i].originalPosition], values[sortedFunctions[i].originalPosition + 1]);
                 values[sortedFunctions[i].originalPosition] = value;
                 values[sortedFunctions[i].originalPosition + 1] = Integer.MIN_VALUE;
                 readjustValues();
@@ -172,14 +172,14 @@ public class reiknivel {
  */
 class FunctionContainer {
     int priority = 0;
-    Reikna reikna;
+    Calculate calculate;
 
     int originalPosition = 0;
 
     // Could also have a normal constructor, went about this way simply out of habit.
-    void initialize(int priority, Reikna reikna){
+    void initialize(int priority, Calculate calculate){
         this.priority = priority;
-        this.reikna = reikna;
+        this.calculate = calculate;
     }
 
     void setOriginalPosition(int a) {originalPosition = a;}
@@ -188,7 +188,7 @@ class FunctionContainer {
     public String toString() {
         return "functionContainer{" +
                 "priority=" + priority +
-                ", reikna=" + reikna +
+                ", calculate=" + calculate +
                 ", originalPosition=" + originalPosition +
                 '}';
     }

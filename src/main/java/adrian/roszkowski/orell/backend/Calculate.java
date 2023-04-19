@@ -8,6 +8,6 @@ package adrian.roszkowski.orell.backend;
  *
  *
  *****************************************************************************/
-public interface Reikna {
+public interface Calculate {
     public int calculate(int a, int b);
 }
