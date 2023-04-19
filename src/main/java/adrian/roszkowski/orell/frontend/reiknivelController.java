@@ -1,6 +1,7 @@
-package adrian.roszkowski.orell;
+package adrian.roszkowski.orell.frontend;
 
 
+import adrian.roszkowski.orell.backend.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 

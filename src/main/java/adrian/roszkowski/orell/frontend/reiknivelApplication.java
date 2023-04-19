@@ -1,4 +1,4 @@
-package adrian.roszkowski.orell;
+package adrian.roszkowski.orell.frontend;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
