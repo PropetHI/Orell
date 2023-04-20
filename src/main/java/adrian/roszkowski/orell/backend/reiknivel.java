@@ -28,6 +28,7 @@ public class reiknivel {
         return a * b;
     };
 
+
     int[] values = new int[2];
     int lastOccupied = -1;
     FunctionContainer[] functions = new FunctionContainer[1];
