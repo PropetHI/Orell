@@ -18,7 +18,7 @@ class calculatorTest {
         @Test
         void setFunction() {
             Calculator.setFunction(Calculator.addition, 1);
-            assertEquals(Calculator.addition, Calculator.addition);
+            assertEquals( 0, Calculator.values[1]);
 
         }
 
