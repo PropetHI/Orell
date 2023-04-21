@@ -27,11 +27,11 @@ class reiknivelTest {
             Calculate calculator1 = new Calculate() {
                 @Override
                 public int calculate(int a, int b) {
-                    return a-b;
+                    return a - b;
                 }
             };
-            double result2 = calculator.calculate(5,  3);
-            assertEquals(2.0, result, 0.0001);
+            double result2 = calculator.calculate(3,  3);
+            assertEquals(0, result2, 0.0001);
 
             Calculate calculator3 = new Calculate() {
                 @Override
@@ -40,7 +40,7 @@ class reiknivelTest {
                 }
             };
             double result3 = calculator.calculate(2,  3);
-            assertEquals(6, result, 0.0001);
+            assertEquals(6, result3, 0.0001);
 
             Calculate calculate4 = new Calculate() {
                 @Override
@@ -49,7 +49,7 @@ class reiknivelTest {
                 }
             };
             double result4 = calculator.calculate(10,  2);
-            assertEquals(5, result, 0.0001);
+            assertEquals(5, result4, 0.0001);
 
 
 
