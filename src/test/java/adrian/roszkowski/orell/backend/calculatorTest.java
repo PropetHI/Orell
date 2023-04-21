@@ -17,8 +17,10 @@ class calculatorTest {
 
         @Test
         void setFunction() {
+            Calculator.setValue("4");
             Calculator.setFunction(Calculator.addition, 1);
-            assertEquals( 0, Calculator.values[1]);
+            Calculator.setValue("10");
+            assertEquals( 14, Calculator.calculate());
 
         }
 
@@ -30,10 +32,10 @@ class calculatorTest {
 
         @Test
         void calculate() {
+            Calculator.setValue("10");
             Calculator.setFunction(Calculator.addition, 1);
             Calculator.setValue("15");;
-            Calculator.calculate();
-            assertEquals(15, Calculator.values[0]);
+            assertEquals(25, Calculator.values[0]);
         }
 
         @Test
