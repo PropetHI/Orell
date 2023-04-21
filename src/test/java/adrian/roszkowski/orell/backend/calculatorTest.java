@@ -7,86 +7,41 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class calculatorTest {
 
-    @BeforeEach
-    void setUp() {
 
+
+    Calculator Calculator;
+        @BeforeEach
+        void setUp() {
+            Calculator = new Calculator();
+        }
+
+        @Test
+        void setFunction() {
+            Calculator.setFunction(Calculator.addition, 1);
+            assertEquals(Calculator.addition, Calculator.addition);
+
+        }
+
+        @Test
+        void setValue() {
+            Calculator.setValue( "10");
+            assertEquals(10, Calculator.values[0]);
+        }
+
+        @Test
+        void calculate() {
+            Calculator.setFunction(Calculator.addition, 1);
+            Calculator.setValue("15");;
+            Calculator.calculate();
+            assertEquals(15, Calculator.values[0]);
+        }
+
+        @Test
+        void reset() {
+            Calculator.setFunction(Calculator.addition, 1);
+            Calculator.setValue("15");;
+            Calculator.calculate();
+            Calculator.reset();
+        }
     }
 
-    @Test
-    void calculate() {
-        //TODO make a test for this function
-        Calculate calculator = new Calculate() {
-            @Override
-            public int calculate(int a, int b) {
-                return a + b;
-            }
-        };
-        double result = calculator.calculate(2, 3);
-        assertEquals(5.0, result, 0.0001);
-
-            Calculate calculator1 = new Calculate() {
-                @Override
-                public int calculate(int a, int b) {
-                    return a - b;
-                }
-            };
-            double result2 = calculator.calculate(3,  3);
-            assertEquals(0, result2, 0.0001);
-
-            Calculate calculator3 = new Calculate() {
-                @Override
-                public int calculate(int a, int b) {
-                    return a*b;
-                }
-            };
-            double result3 = calculator.calculate(2,  3);
-            assertEquals(6, result3, 0.0001);
-
-            Calculate calculate4 = new Calculate() {
-                @Override
-                public int calculate(int a, int b) {
-                    return a/b;
-                }
-            };
-            double result4 = calculator.calculate(10,  2);
-            assertEquals(5, result4, 0.0001);
-
-
-
-
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @Test
-    void reset() {
-
-    }
-}
