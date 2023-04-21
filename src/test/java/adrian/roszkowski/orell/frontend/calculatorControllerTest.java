@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class reiknivelControllerTest {
+class calculatorControllerTest {
 
     @BeforeEach
     void setUp() {

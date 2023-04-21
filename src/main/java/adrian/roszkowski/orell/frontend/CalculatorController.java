@@ -13,9 +13,9 @@ import javafx.scene.control.Label;
  *
  *
  *****************************************************************************/
-public class reiknivelController {
+public class CalculatorController {
 
-    private reiknivel _reiknivel = new reiknivel();
+    private Calculator _calculator = new Calculator();
 
     // Using a string instead of multiplying the value by ten is a readability improvement for me. Also, something
     // A little different than the obvious answer.
@@ -119,9 +119,9 @@ public class reiknivelController {
     @FXML
     private void button_decrement_pressed(){
         if (numberString.equals("")) return;
-        _reiknivel.setValue(numberString);
+        _calculator.setValue(numberString);
         numberString = "";
-        _reiknivel.setFunction(_reiknivel.decrement, 0);
+        _calculator.setFunction(_calculator.decrement, 0);
         totalString += " - ";
         updateInput();
     }
@@ -129,9 +129,9 @@ public class reiknivelController {
     @FXML
     private void button_addition_pressed(){
         if (numberString.equals("")) return;
-        _reiknivel.setValue(numberString);
+        _calculator.setValue(numberString);
         numberString = "";
-        _reiknivel.setFunction(_reiknivel.addition, 1);
+        _calculator.setFunction(_calculator.addition, 1);
         totalString += " + ";
         updateInput();
     }
@@ -139,9 +139,9 @@ public class reiknivelController {
     @FXML
     private void button_division_pressed(){
         if (numberString.equals("")) return;
-        _reiknivel.setValue(numberString);
+        _calculator.setValue(numberString);
         numberString = "";
-        _reiknivel.setFunction(_reiknivel.division, 2);
+        _calculator.setFunction(_calculator.division, 2);
         totalString += " / ";
         updateInput();
     }
@@ -149,9 +149,9 @@ public class reiknivelController {
     @FXML
     private void button_multiplication_pressed(){
         if (numberString.equals("")) return;
-        _reiknivel.setValue(numberString);
+        _calculator.setValue(numberString);
         numberString = "";
-        _reiknivel.setFunction(_reiknivel.multiplication, 3);
+        _calculator.setFunction(_calculator.multiplication, 3);
         totalString += " * ";
         updateInput();
     }
@@ -159,18 +159,18 @@ public class reiknivelController {
     @FXML
     private void button_result_pressed(){
         if (numberString != ""){
-            _reiknivel.setValue(numberString);
+            _calculator.setValue(numberString);
         }
-        int value = _reiknivel.calculate();
+        int value = _calculator.calculate();
         totalString = Integer.toString(value);
         updateInput();
-        _reiknivel.reset();
+        _calculator.reset();
 
         numberString = Integer.toString(value);
     }
 
     private void reset() {
-        _reiknivel.reset();
+        _calculator.reset();
         totalString = "";
         numberString = "";
         updateInput();

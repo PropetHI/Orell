@@ -1,9 +1,8 @@
 # HBV202G Final Project
-A project that uses a calculator to calculate the sum of two numbers.
+A Calculator made for the final project.
  
-This project is a javaFx application that uses a calculator to calculate the sum of two numbers.
+This project uses JavaFX for the frontend and is able to calculate any number of expressions together.
 
--'src/main/java/adrian/roszkowski/orell/frontend/reiknivelApplication.java'  The main function is located in the application, and when running, calls methods in other functions, and acts as the entry point for code execution
 
 
 

@@ -10,7 +10,7 @@ import java.util.Arrays;
  *
  *
  *****************************************************************************/
-public class reiknivel {
+public class Calculator {
     // Instead of putting the Lambda functions in a array, I put them in an individual named format
     // For more comfortable reading. I understand the minor increase in efficiency / optimization
     // When opting to use an array instead. With it being more efficient the more Lambda operations
