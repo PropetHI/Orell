@@ -13,16 +13,29 @@ class reiknivelTest {
     }
 
     @Test
-    void setFunction() {
-    }
-
-    @Test
-    void setValue() {
-    }
-
-    @Test
     void calculate() {
-    }
+        //TODO make a test for this function
+       Calculate addition = (int a, int b) -> {
+
+           return a + b;
+       };
+
+
+        Calculate decrement = (int a, int b) -> {
+           return a - b;
+       };
+       Calculate division = (int a, int b) -> {
+           return a / b;
+       };
+       Calculate multiplication = (int a, int b) -> {
+           return a * b;
+       };
+
+
+       }
+
+
+
 
     @Test
     void reset() {
